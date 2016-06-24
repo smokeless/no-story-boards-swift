@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
+    //var window:UIWindow?
+    self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    
+    let yellowVC = YellowVC( nibName: "YellowVC", bundle:  nil )
+    window?.rootViewController = yellowVC
+    window?.makeKeyAndVisible()
+    
     return true
   }
 
